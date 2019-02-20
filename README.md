@@ -1,7 +1,3 @@
----
-sidebar: auto
----
-
 # Style Guide
 
 ## Linter Overview
@@ -25,13 +21,13 @@ Additionally we adopt a few additional linter rules:
 Use Pascal case.
 
 Good:
-``` js{4}
+``` js
 MyComponent.vue
 Sentry.js
 ```
 
 Bad:
-``` js{4}
+``` js
 myComponent.vue
 sentry.js
 ```
@@ -39,12 +35,12 @@ sentry.js
 If the component is a system wide, reusable component (like snDataTable), append lowercase sn to the component name.
 
 Good:
-``` js{4}
+``` js
 snReusableComponent.vue
 ```
 
 Bad:
-``` js{4}
+``` js
 ReusableComponent.vue
 ```
 
@@ -81,7 +77,7 @@ import ArbitraryFilename from '~/util/ArbitraryFileName.js'
 Do not give components a custom name when registering them.
 
 Good:
-``` js{4}
+``` js
 components: {
   snDataTable,
   LoanMilestones
@@ -89,7 +85,7 @@ components: {
 ```
 
 Bad:
-``` js{4}
+``` js
 components: {
   'sn-data-table': snDataTable,
   'myLoanMilestones': LoanMilestones
@@ -100,12 +96,12 @@ components: {
 Use Pascal case for tag name.
 
 Good:
-``` html{4}
+``` html
 <MyComponent/>
 ```
 
 Bad:
-``` html{4}
+``` html
 <my-component/>
 ```
 
