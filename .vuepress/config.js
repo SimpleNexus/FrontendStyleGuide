@@ -12,4 +12,16 @@ module.exports = {
           '/'
         ]
       },
+      {
+        sidebarDepth: 2,
+        collapsable: false,
+        children: [
+          '/icons/'
+        ]
+      }
+    ]
+  },
+  head: [
+    ['link', { rel: 'stylesheet', href: '/css/icons.css'}]
+  ]
 }
