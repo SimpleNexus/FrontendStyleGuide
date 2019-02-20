@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'SimpleNexusIcons';
-  src:  url('/fonts/SimpleNexusIcons.eot?2ve4bm');
-  src:  url('/fonts/SimpleNexusIcons.eot?2ve4bm#iefix') format('embedded-opentype'),
-    url('/fonts/SimpleNexusIcons.ttf?2ve4bm') format('truetype'),
-    url('/fonts/SimpleNexusIcons.woff?2ve4bm') format('woff'),
-    url('/fonts/SimpleNexusIcons.svg?2ve4bm#SimpleNexusIcons') format('svg');
+  src:  url('/FrontendStyleGuide/fonts/SimpleNexusIcons.eot?2ve4bm');
+  src:  url('/FrontendStyleGuide/fonts/SimpleNexusIcons.eot?2ve4bm#iefix') format('embedded-opentype'),
+    url('/FrontendStyleGuide/fonts/SimpleNexusIcons.ttf?2ve4bm') format('truetype'),
+    url('/FrontendStyleGuide/fonts/SimpleNexusIcons.woff?2ve4bm') format('woff'),
+    url('/FrontendStyleGuide/fonts/SimpleNexusIcons.svg?2ve4bm#SimpleNexusIcons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
