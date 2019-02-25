@@ -6,7 +6,7 @@
         :class="`sn-${icon.properties.name}`"
         class="icon"
       />
-      <h2 style="display: inline; vertical-align: top;">sn-{{ icon.properties.name }}</h2>
+      <h2 style="display: inline; vertical-align: top;">sn-icon-{{ icon.properties.name }}</h2>
       <p style="margin-left: 62px; margin-top: -32px;">{{ icon.icon.tags.join(', ') }}</p>
     </div>
   </div>
