@@ -48,13 +48,13 @@ ReusableComponent.vue
 Import using the same name as the file name.
 
 Good:
-``` js{4}
+``` js
 import MyComponent from '~/components/MyComponent'
 import snDataTable from '~/components/snDataTable'
 ```
 
 Bad:
-``` js{4}
+``` js
 import AGreatComponent from '~/components/MyComponent'
 import SnDataTable from '~/components/snDataTable'
 ```
@@ -62,15 +62,36 @@ import SnDataTable from '~/components/snDataTable'
 Do not include the file extension when importing.
 
 Good:
-``` js{4}
+``` js
 import MyComponent from '~/components/MyComponent'
 import ArbitraryFilename from '~/util/ArbitraryFileName'
 ```
 
 Bad:
-``` js{4}
+``` js
 import MyComponent from '~/components/MyComponent.vue'
 import ArbitraryFilename from '~/util/ArbitraryFileName.js'
+```
+
+### Naming Components
+Components must be named. The name should be the same thing as the file name (without the extension)
+
+Good:
+```js
+/* MyComponent.vue */
+export default {
+  name: 'MyComponent'
+  ...
+}
+```
+
+Bad:
+```js
+/* MyComponent.vue */
+export default {
+  name: 'my-component'
+  ...
+}
 ```
 
 ### Registering Components
@@ -108,15 +129,95 @@ Bad:
 If the component is a system-wide, reusable component (like snDataTable), or comes from an external library (like Vuetify), use kabab-case.
 
 Good:
-``` html{4}
+``` html
 <sn-data-table/>
 <v-autocomplete/>
 ```
 
 Bad:
-``` html{4}
+``` html
 <SnDataTable/>
 <VAutocomplete/>
+```
+
+## Naming and using mixins
+
+### Naming Mixins
+Mixins must have "Mixin" in the name.
+
+Good:
+```
+MyTestMixin.js
+```
+
+Bad:
+```
+MyTest.js
+```
+
+### Scoping
+All methods and data in a mixin should have a prefix of `$_$MIXIN_NAME$_`. (see https://vuejs.org/v2/style-guide/#Private-property-names-essential)
+
+Good:
+``` js
+/* MyTestMixin.js */
+var MyTestMixin = {
+  // ...
+  methods: {
+    $_MyTestMixin_update () {
+      // ...
+    }
+  }
+}
+```
+
+Bad:
+``` js
+/* MyTestMixin.js */
+var MyTestMixin = {
+  // ...
+  methods: {
+    update () {
+      // ...
+    }
+  }
+}
+```
+
+``` js
+/* MyTestMixin.js */
+var MyTestMixin = {
+  // ...
+  methods: {
+    _update () {
+      // ...
+    }
+  }
+}
+```
+
+``` js
+/* MyTestMixin.js */
+var MyTestMixin = {
+  // ...
+  methods: {
+    $update () {
+      // ...
+    }
+  }
+}
+```
+
+``` js
+/* MyTestMixin.js */
+var MyTestMixin = {
+  // ...
+  methods: {
+    $_update () {
+      // ...
+    }
+  }
+}
 ```
 
 ## Folder structure
