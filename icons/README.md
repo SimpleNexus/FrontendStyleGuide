@@ -13,7 +13,9 @@ Vuetify by default uses the official [Google Material Icons](https://material.io
 Using `v-icon` with a custom icon is incredibly simple. For example, if you wanted to use the `sn-star` icon, here's the markup you'd need:
 
 ```html
-<v-icon v-html="'$vuetify.icons.sn-star'"/>
+<v-icon>
+  {{ $vuetify.icons['sn-icon-star'] }}
+</v-icon>
 ```
 
 To use a custom icon, you must pass the value in with `v-html` or `v-text`. Simply passing the value in as a slot like `v-icon` normally works will not work.
