@@ -156,7 +156,7 @@ MyTest.js
 ```
 
 ### Scoping
-All methods and data in a mixin should have a prefix of `$_$MIXIN_NAME$_`. (see https://vuejs.org/v2/style-guide/#Private-property-names-essential)
+All methods and data in a mixin should have a prefix of `sn_mixinName_`. This is a slight deviation from the vue style guide but the concept is the same. (see https://vuejs.org/v2/style-guide/#Private-property-names-essential)
 
 Good:
 ``` js
@@ -164,7 +164,7 @@ Good:
 var MyTestMixin = {
   // ...
   methods: {
-    $_MyTestMixin_update () {
+    sn_myTestMixin_update () {
       // ...
     }
   }
