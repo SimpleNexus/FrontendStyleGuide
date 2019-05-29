@@ -40,7 +40,11 @@ SimpleNexusIcons/
 -- -- SimpleNexusIcons.ttf
 ```
 
-All we need from this is the `selection.json`, `style.css`, and the four font files. Rename `style.css` to `snIcons.css`, and then manually replace the following files in the app with these new files:
+All we need from this is the `selection.json`, `style.css`, and the four files in the `fonts/` directory.
+
+- Rename `style.css` to `snIcons.css`.
+- In `snIcons.css` in the `src` declarations at the top add `../` to the `url('...')` attributes so that the pathing will be correct.
+- Manually replace the following files in the app with these new files:
 
 ```
 -- app/javascript/
@@ -56,5 +60,7 @@ All we need from this is the `selection.json`, `style.css`, and the four font fi
 -- -- -- icons/
 -- -- -- -- selection.json
 ```
+
+- You may have to run `rm -rf node_modules/.cache/hard-source/` from the root of the Rails project if things don't work the first time.
 
 Once those files are in place, you can restart the server and the new icons will be ready to be used!
