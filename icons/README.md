@@ -44,6 +44,7 @@ All we need from this is the `selection.json`, `style.css`, and the four files i
 
 - Rename `style.css` to `snIcons.css`.
 - In `snIcons.css` in the `src` declarations at the top add `../` to the `url('...')` attributes so that the pathing will be correct.
+- In `snIcons.css` make sure the icon classes are `.sn-icon-<THING>`. Some times they will come across as `.sn-icon-sn-<THING>`.
 - Manually replace the following files in the app with these new files:
 
 ```
