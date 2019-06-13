@@ -220,6 +220,66 @@ var MyTestMixin = {
 }
 ```
 
+## Polyfills
+All polyfills are located in the `app/javascript/polyfills` folder. The naming
+convention for a polyfill file should be `Object_property.js`. For example:
+`Array_from.js` will contain a polyfill for the `Array.from()` method.
+
+Good:
+```js
+Array_from.js
+```
+
+Bad: 
+```js
+CustomArrayFromPolyfill.js
+```
+
+All polyfills should be imported and initialized in
+`app/javascript/polyfills/index.js`. If a polyfill is being imported from an npm
+module (like `@babel/polyfill`), it should be imported here as well. Any
+initialization should take place in the self-invoking function. This ensures
+that all the polyfills are initialized on import. Example:
+
+Good: 
+```js
+import xpath from 'wicked-good-xpath'
+import ChildNode_remove from './ChildNode_remove' // Self-invoking
+
+(function () {
+  xpath.install()
+})()
+```
+
+Bad:
+```js
+import xpath from 'wicked-good-xpath`
+import ChildNode_remove from './ChildNode_remove' 
+
+export {xpath, ChildNode_remove}
+```
+
+Any new packs should import the polyfills at the top of the file. Example:
+
+Good:
+```js
+// myNewPack.js
+import '../polyfills'
+import Vue from 'vue'
+// ...
+```
+
+Bad:
+```js
+// myNewPack.js
+import xpath from 'wicked-good-xpath'
+import '@babel/polyfill'
+import Vue from 'vue'
+// ...
+```
+
+
+
 ## Folder structure
 All Vue related files are located in `/app/javascript/..`
 ```
@@ -228,6 +288,7 @@ All Vue related files are located in `/app/javascript/..`
 -- -- components/
 -- -- packs/
 -- -- plugins/
+-- -- polyfills/
 -- -- services/
 -- -- store/
 -- -- tests/
