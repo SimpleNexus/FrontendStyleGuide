@@ -256,7 +256,7 @@ Bad:
 import xpath from 'wicked-good-xpath`
 import ChildNode_remove from './ChildNode_remove' 
 
-export {xpath, ChildNode_remove}
+export {xpath, ChildNode_remove}t 
 ```
 
 Any new packs should import the polyfills at the top of the file. Example:
