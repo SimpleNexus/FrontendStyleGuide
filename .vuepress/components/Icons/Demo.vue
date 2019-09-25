@@ -31,7 +31,6 @@
         return 0
       })
       for (let icon of ics) {
-        console.log(icon)
         this.icons.push(icon)
       }
     }
