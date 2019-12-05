@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="(icon, index) in icons">
+    <div v-for="(icon, index) in icons" :key="`icon-${index}`">
       <br>
       <span
         :class="`sn-icon-${icon.properties.name}`"
