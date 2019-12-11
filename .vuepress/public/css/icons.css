@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'SimpleNexusIcons';
-  src:  url('/FrontendStyleGuide/fonts/SimpleNexusIcons.eot?5jrji4');
-  src:  url('/FrontendStyleGuide/fonts/SimpleNexusIcons.eot?5jrji4#iefix') format('embedded-opentype'),
-    url('/FrontendStyleGuide/fonts/SimpleNexusIcons.ttf?5jrji4') format('truetype'),
-    url('/FrontendStyleGuide/fonts/SimpleNexusIcons.woff?5jrji4') format('woff'),
-    url('/FrontendStyleGuide/fonts/SimpleNexusIcons.svg?5jrji4#SimpleNexusIcons') format('svg');
+  src:  url('/FrontendStyleGuide/fonts/SimpleNexusIcons.eot?cn9h0r');
+  src:  url('/FrontendStyleGuide/fonts/SimpleNexusIcons.eot?cn9h0r#iefix') format('embedded-opentype'),
+    url('/FrontendStyleGuide/fonts/SimpleNexusIcons.ttf?cn9h0r') format('truetype'),
+    url('/FrontendStyleGuide/fonts/SimpleNexusIcons.woff?cn9h0r') format('woff'),
+    url('/FrontendStyleGuide/fonts/SimpleNexusIcons.svg?cn9h0r#SimpleNexusIcons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.sn-icon-arrow-down-circle:before {
+  content: "\e976";
+}
+.sn-icon-arrow-left-circle:before {
+  content: "\e977";
+}
+.sn-icon-arrow-right-circle:before {
+  content: "\e978";
+}
+.sn-icon-arrow-up-circle:before {
+  content: "\e979";
+}
+.sn-icon-city:before {
+  content: "\e97a";
+}
+.sn-icon-dashboard:before {
+  content: "\e97b";
+}
+.sn-icon-folder:before {
+  content: "\e97c";
+}
+.sn-icon-unlock:before {
+  content: "\e97d";
+}
 .sn-icon-speech-bubble:before {
   content: "\e943";
 }
