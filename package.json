@@ -1,0 +1,15 @@
+{
+  "name": "FrontendStyleGuide",
+  "version": "1.0.0",
+  "description": "FE Styleguide for SimpleNexus",
+  "main": "index.js",
+  "repository": "git@github.com:SimpleNexus/FrontendStyleGuide.git",
+  "author": "SimpleNexus",
+  "license": "MIT",
+  "scripts": {
+    "build": "npx vuepress build"
+  },
+  "devDependencies": {
+    "vuepress": "^1.4.0"
+  }
+}
